@@ -1,0 +1,43 @@
+body {
+  background-color: rgb(196, 212, 226);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.quadrado {
+  max-width: 200px;
+  /* Garante que o quadrado não ultrapasse a largura do contêiner pai */
+  background-color: #fdfefe;
+  /* Altere a cor conforme necessário */
+  overflow: hidden;
+  /* Certifica-se de que a imagem não ultrapasse as bordas do quadrado */
+  border-radius: 10px;
+  /* Adicione essa propriedade para arredondar as bordas */
+}
+
+.quadrado img {
+  margin: 5%;
+  width: 90%;
+  /* A imagem ocupará 100% da largura do quadrado */
+  height: auto;
+  /* A altura será ajustada automaticamente para manter a proporção da imagem */
+  border-radius: 10px;
+  display: block;
+  /* Remove a margem inferior indesejada que pode ocorrer em elementos inline */
+}
+
+.texto {
+  margin: 5%;
+}
+
+footer {
+  color: #010000;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

@@ -1,0 +1,38 @@
+body{
+  background-color: rgb(23, 23, 57);
+}
+h3{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: aliceblue;
+}
+p{ 
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: aliceblue;
+  opacity: 0.5;
+}
+.texto{
+  margin: 5%;
+}
+.quadrado {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;
+  /* Garante que o quadrado não ultrapasse a largura do contêiner pai */
+  background-color:hsl(215, 73%, 19%);
+  /* Altere a cor conforme necessário */
+  overflow: hidden;
+  /* Certifica-se de que a imagem não ultrapasse as bordas do quadrado */
+  border-radius: 10px;
+  /* Adicione essa propriedade para arredondar as bordas */
+}
+.quadrado img {
+  margin: 5%;
+  width: 90%;
+  /* A imagem ocupará 100% da largura do quadrado */
+  height: auto;
+  /* A altura será ajustada automaticamente para manter a proporção da imagem */
+  border-radius: 10px;}
+  .attribution p{
+    opacity: 0.5;
+  }
+  
