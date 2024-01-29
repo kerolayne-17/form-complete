@@ -4,10 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulário</title>
+  <title> Formulário</title>
   <style>
-    .body {
-      center
+    body {
+      background-color: rgb(5, 45, 45), rgb(15, 68, 69);
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    label,
+    p,
+    h3 {
+      color:
+    }
+
+    label {
+      display: block;
     }
 
     .required {
@@ -42,7 +53,7 @@
       return true;
     }
   </script>
-  <h3>Dados pessoais </h3>
+  <h3 style="font-size: 60px;">Dados pessoais </h3>
   <div class="container">
     <form id="myForm">
       <label for="name">Nome:</label>
@@ -51,8 +62,10 @@
       <label for="endereco">Endereço:</label>
       <input type="endereco" id="endereco" name="endereco" required>
       <br><br>
-      <label for="cidade">Cidade:</label>
-      <input type="cidade" id="cidade" name="cidade" required>
+      <div>
+        <label for="cidade">Cidade:</label>
+        <input type="cidade" id="cidade" name="cidade" required>
+      </div>
       <br><br>
       <label for="state">Estado:</label>
       <select id="state" name="state" required>
