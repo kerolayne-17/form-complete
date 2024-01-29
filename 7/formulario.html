@@ -5,9 +5,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário</title>
+  <style>
+    .body {
+      center
+    }
+
+    .required {
+      color: red;
+    }
+  </style>
 </head>
 
 <body>
+  <script>
+    function submitForm() {
+      // Validar campos personalizados se necessário
+      if (validateForm()) {
+        // Se a validação passar, envie o formulário
+        document.getElementById("myForm").submit();
+      }
+    }
+
+    function validateForm() {
+      // Adicione lógica de validação personalizada aqui
+      var name = document.getElementById("name").value;
+      var estado = document.getElementById("estado").value;
+      var naturezadocargo = document.getElementById("naturezadocargo").value;
+      var areadeinteresse = document.getElementById("areadeinteresse").value;
+      if (name.trim() === "" || estado.trim() === "" || naturezadocargo.trim() === "" || areadeinteresse.trim() === "") {
+        alert("Por favor, preencha todos os campos obrigatórios.");
+        return false;
+      }
+
+      // Adicione outras validações conforme necessário
+
+      return true;
+    }
+  </script>
   <h3>Dados pessoais </h3>
   <div class="container">
     <form id="myForm">
@@ -36,7 +70,7 @@
       <br>
       <br>
       <h3>Dados profissionais</h3>
-      <p>Natureza do cargo</p>
+      <p>Natureza do cargo</p><span class="required"> *</span>
       <label for="checkbox">
         <input type="checkbox" id="checkbox" name="checkbox">
         <span class="custom-checkbox"></span>
@@ -62,11 +96,11 @@
         <span class="custom-checkbox"></span>
         Jurídico
       </label>
-      <p>Área de interesse</p>
+      <p>Área de interesse</p><span class="required"> *</span>
       <label for="checkbox">
         <input type="checkbox" id="checkbox" name="checkbox">
         <span class="custom-checkbox"></span>
-        computação
+        Computação
       </label> <label for="checkbox">
         <input type="checkbox" id="checkbox" name="checkbox">
         <span class="custom-checkbox"></span>
@@ -84,11 +118,13 @@
         <span class="custom-checkbox"></span>
         História
       </label>
-
+      <br>
+      <br>
       <label for="message">Mini curriculo:</label>
-      <textarea id="minicurriculo" name="minicurriculo" rows="4" minlength="3" maxlength="10" required></textarea>
+      <textarea id="minicurriculo" name="minicurriculo" rows="4" minlength="10" maxlength="300" required></textarea><span class="required"> *</span>
       <br><br>
-      <button type="button" onclick="submitForm()">Enviar</button>
+      <button type="reset">Limpar</button>
+      <button type="submit">Enviar</button>
     </form>
   </div>
   <div>
