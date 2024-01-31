@@ -1,0 +1,46 @@
+body {
+  background: url(https://st4.depositphotos.com/18803028/29206/i/450/depositphotos_292069406-stock-photo-2d-illustration-realistic-stars-pattern.jpg);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+div {
+  display: block;
+}
+label {
+  margin: 2px;
+  display: block;
+}
+.required {
+  margin: 0%;
+  color: red;
+}
+.quadrado {
+  display: block;
+  margin: 15px;
+  width: 957px;
+  height: 230px;
+  border: 2px solid #fbf9f9; /* Cor e largura da borda */
+  padding: 30px;
+  opacity: 0.4;
+}
+.quadrado2 {
+  display: block;
+  margin: 15px;
+  width: 975px;
+  height: 500px;
+  border: 2px solid #f9f7f7; /* Cor e largura da borda */
+  padding: 20px;
+  opacity: 0.4;
+}
+button {
+  margin-inline: 5px;
+  margin: 10px;
+  margin-top: 20px;
+}
+.minicurriculo {
+  resize: none;
+}
+label,
+p,
+h3 {
+  color: aliceblue;
+}

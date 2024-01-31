@@ -5,143 +5,128 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Formulário</title>
-  <style>
-    body {
-      background-color: rgb(5, 45, 45), rgb(15, 68, 69);
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-
-    label,
-    p,
-    h3 {
-      color:
-    }
-
-    label {
-      display: block;
-    }
-
-    .required {
-      color: red;
-    }
-  </style>
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-Wg5mR5Xwe7YHRdxEmF5s0wG5g50S+aP5OBV6l4X8nbCIqNUD3s5Tdl+2a0W3HyiRQg2rOq79q9ZPl4Jh/VZ6Fg==" crossorigin="anonymous">
 </head>
 
 <body>
-  <script>
-    function submitForm() {
-      // Validar campos personalizados se necessário
-      if (validateForm()) {
-        // Se a validação passar, envie o formulário
-        document.getElementById("myForm").submit();
-      }
-    }
-
-    function validateForm() {
-      // Adicione lógica de validação personalizada aqui
-      var name = document.getElementById("name").value;
-      var estado = document.getElementById("estado").value;
-      var naturezadocargo = document.getElementById("naturezadocargo").value;
-      var areadeinteresse = document.getElementById("areadeinteresse").value;
-      if (name.trim() === "" || estado.trim() === "" || naturezadocargo.trim() === "" || areadeinteresse.trim() === "") {
-        alert("Por favor, preencha todos os campos obrigatórios.");
-        return false;
-      }
-
-      // Adicione outras validações conforme necessário
-
-      return true;
-    }
-  </script>
-  <h3 style="font-size: 60px;">Dados pessoais </h3>
+  <script src="./script.js"></script>
   <div class="container">
-    <form id="myForm">
-      <label for="name">Nome:</label>
-      <input type="text" id="name" name="name" required><span class="required"> *</span>
-      <br><br>
-      <label for="endereco">Endereço:</label>
-      <input type="endereco" id="endereco" name="endereco" required>
-      <br><br>
-      <div>
-        <label for="cidade">Cidade:</label>
-        <input type="cidade" id="cidade" name="cidade" required>
-      </div>
-      <br><br>
-      <label for="state">Estado:</label>
-      <select id="state" name="state" required>
-        <option value="" disabled selected>Selecione um estado</option>
-        <option value="AL">Alagoas</option>
-        <option value="BA">Bahia</option>
-        <option value="CE">Ceará</option>
-        <option value="MA">Maranhão</option>
-        <option value="PB">Paraíba</option>
-        <option value="PE">Pernambuco</option>
-        <option value="PI">Piauí</option>
-        <option value="RN">Rio Grande do Norte</option>
-        <option value="SE">Sergipe</option>
-      </select><span class="required">*</span>
-      <br>
-      <br>
+    <div class="quadrado">
+
+      <h3>Dados pessoais </h3>
+      <form id="myForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required><span class="required"> *</span>
+        <label for="endereco">Endereço:</label>
+        <input type="endereco" id="endereco" name="endereco" required>
+        <div>
+          <label for="cidade">Cidade:</label>
+          <input type="cidade" id="cidade" name="cidade" required>
+        </div>
+        <div>
+          <label for="state">Estado:</label>
+          <select id="state" name="state" required>
+            <option value="" disabled selected>Selecione um estado</option>
+            <option value="AL">Alagoas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="MA">Maranhão</option>
+            <option value="PB">Paraíba</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="SE">Sergipe</option>
+          </select><span class="required">*</span>
+
+        </div>
+    </div>
+    <div class="quadrado2">
+
       <h3>Dados profissionais</h3>
       <p>Natureza do cargo</p><span class="required"> *</span>
-      <label for="checkbox">
-        <input type="checkbox" id="checkbox" name="checkbox">
-        <span class="custom-checkbox"></span>
-        Gêrencia
-      </label>
-      <label for="checkbox">
-        <input type="checkbox" id="checkbox" name="checkbox">
-        <span class="custom-checkbox"></span>
-        Financeiro
-      </label>
-      <label for="checkbox">
-        <input type="checkbox" id="checkbox" name="checkbox">
-        <span class="custom-checkbox"></span>
-        Recpção
-      </label>
-      <label for="checkbox">
-        <input type="checkbox" id="checkbox" name="checkbox">
-        <span class="custom-checkbox"></span>
-        Administrativo
-      </label>
-      <label for="checkbox">
-        <input type="checkbox" id="checkbox" name="checkbox">
-        <span class="custom-checkbox"></span>
-        Jurídico
-      </label>
-      <p>Área de interesse</p><span class="required"> *</span>
-      <label for="checkbox">
-        <input type="checkbox" id="checkbox" name="checkbox">
-        <span class="custom-checkbox"></span>
-        Computação
-      </label> <label for="checkbox">
-        <input type="checkbox" id="checkbox" name="checkbox">
-        <span class="custom-checkbox"></span>
-        Biologia
-      </label> <label for="checkbox">
-        <input type="checkbox" id="checkbox" name="checkbox">
-        <span class="custom-checkbox"></span>
-        Meio Ambiente
-      </label> <label for="checkbox">
-        <input type="checkbox" id="checkbox" name="checkbox">
-        <span class="custom-checkbox"></span>
-        Engenheira
-      </label> <label for="checkbox">
-        <input type="checkbox" id="checkbox" name="checkbox">
-        <span class="custom-checkbox"></span>
-        História
-      </label>
-      <br>
-      <br>
-      <label for="message">Mini curriculo:</label>
-      <textarea id="minicurriculo" name="minicurriculo" rows="4" minlength="10" maxlength="300" required></textarea><span class="required"> *</span>
-      <br><br>
-      <button type="reset">Limpar</button>
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-  <div>
-
+      <div>
+        <label for="checkbox">
+          <input type="checkbox" id="checkbox" name="checkbox">
+          <span class="custom-checkbox"></span>
+          Gêrencia
+        </label>
+      </div>
+      <div>
+        <label for="checkbox">
+          <input type="checkbox" id="checkbox" name="checkbox">
+          <span class="custom-checkbox"></span>
+          Financeiro
+        </label>
+      </div>
+      <div>
+        <label for="checkbox">
+          <input type="checkbox" id="checkbox" name="checkbox">
+          <span class="custom-checkbox"></span>
+          Recpção
+        </label>
+      </div>
+      <div>
+        <label for="checkbox">
+          <input type="checkbox" id="checkbox" name="checkbox">
+          <span class="custom-checkbox"></span>
+          Administrativo
+        </label>
+      </div>
+      <div>
+        <label for="checkbox">
+          <input type="checkbox" id="checkbox" name="checkbox">
+          <span class="custom-checkbox"></span>
+          Jurídico
+        </label>
+      </div>
+      <div>
+        <p>Área de interesse</p><span class="required"> *</span>
+        <label for="checkbox">
+          <input type="checkbox" id="checkbox" name="checkbox">
+          <span class="custom-checkbox"></span>
+          Computação
+        </label>
+      </div>
+      <div>
+        <label for="checkbox">
+          <input type="checkbox" id="checkbox" name="checkbox">
+          <span class="custom-checkbox"></span>
+          Biologia
+        </label>
+      </div>
+      <div>
+        <label for="checkbox">
+          <input type="checkbox" id="checkbox" name="checkbox">
+          <span class="custom-checkbox"></span>
+          Meio Ambiente
+        </label>
+      </div>
+      <div>
+        <label for="checkbox">
+          <input type="checkbox" id="checkbox" name="checkbox">
+          <span class="custom-checkbox"></span>
+          Engenheira</label>
+      </div>
+      <div>
+        <label for="checkbox">
+          <input type="checkbox" id="checkbox" name="checkbox">
+          <span class="custom-checkbox"></span>
+          História
+        </label>
+      </div>
+      <div>
+        <label for="minicurriculo">Mini curriculo:</label><br><span class="required">*</span>
+        <textarea id="minicurriculo" name="minicurriculo" rows="4" minlength="10" maxlength="300" required></textarea>
+      </div>
+      <div>
+      </div>
+      <div class="button">
+        <button type="reset">Limpar</button>
+        <button type="submit">Enviar</button>
+      </div>
+      </form>
+    </div>
   </div>
 
   <script src="script.js"></script>
