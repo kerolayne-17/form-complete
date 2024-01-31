@@ -39,3 +39,6 @@ p {
 .texte {
   display: flex;
 }
+.container {
+  display: block;
+}
